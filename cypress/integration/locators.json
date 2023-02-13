@@ -1,0 +1,33 @@
+{
+    "homePage": {
+        "shopByCategory": "#gh-shop-a",
+        "electronicsTitle": "a[title=\"Your shopping destination for the best selection and value in electronics and accessories\"]",
+        "cellPhoneAccessoriesLink": "a:contains(\"Cell phones & accessories\")"
+    },
+    "cellPhoneAccessoriesPage": {
+        "breadcrumb": "[aria-labelledby*=\"-breadcrumbs-heading\"]",
+        "cellPhoneLinkLeftMenu": "section > ul > li > a:contains('Cell Phones & Smartphones')",
+        "shopByBrand": "span:contains('- Shop by Brand')"
+    },
+    "filter": {
+        "screenSizeCheckBox": "[id*=\"-mainPanel-Screen\"]",
+        "priceCheckBox": "[id*=\"-mainPanel-price\"]",
+        "itemLocationCheckBox": "[id*=\"-mainPanel-location\"]",
+        "screenSize5by5CheckBox": "input[id*=\"Size_5.5\"]",
+        "locationWorldWideRadioButton": "input[value=\"Worldwide\"]",
+        "inputMinimumValue": "input[aria-label*=\"Minimum Value\"]",
+        "inputMaximumValue": "input[aria-label*=\"Maximum Value\"]",
+        "applyButton": "button[aria-label=\"Apply\"]",
+        "appliedFilterCount": "button[aria-controls*=\"-tray-tray\"]",
+        "filterTray": "#c5-tray-tray",
+        "aspectScreenFilter": "[data-aspecttype*=\"aspect-Screen\"]",
+        "priceFilter": "[data-aspecttitle*=\"price\"]",
+        "locationFilter": "[data-aspecttitle=\"location\"]",
+        "itemLocationBody": "[data-aspect=location]"
+    },
+
+
+    "searchPage": {
+       "threefilterAppliedButton":"button:contains('3 filters applied')"
+    }
+}

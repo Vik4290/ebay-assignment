@@ -1,0 +1,33 @@
+{
+	"name": "ebay-assignment",
+	"private": true,
+	"scripts": {
+		"cypress": "cypress open",
+		"cypress:headless": "cypress run"
+	},
+	"devDependencies": {
+		"@cypress/browserify-preprocessor": "^3.0.2",
+		"@types/cypress-cucumber-preprocessor": "^4.0.1",
+		"cypress": "^12.5.1",
+		"cypress-cucumber-preprocessor": "^4.3.1",
+		"cypress-multi-reporters": "^1.6.2",
+		"cypress-slow-down": "^1.2.1",
+		"cypress-wait-until": "^1.7.2",
+		"cypress-xpath": "^2.0.1",
+		"mocha": "^10.0.0",
+		"mochawesome": "^7.1.3",
+		"mochawesome-merge": "^4.2.1",
+		"mochawesome-report-generator": "^6.2.0",
+		"typescript": "^4.5.4",
+		"yarn-upgrade-all": "^0.6.1"
+	},
+	"cypress-cucumber-preprocessor": {
+		"nonGlobalStepDefinitions": true,
+		"cucumberJson": {
+			"generate": true,
+			"outputFolder": "cypress/reports",
+			"filePrefix": "",
+			"fileSuffix": ".cucumber"
+		}
+	}
+}

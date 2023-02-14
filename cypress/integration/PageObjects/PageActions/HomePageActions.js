@@ -14,10 +14,21 @@ export default class HomePageActions {
   verifyCellphoneAccessoriesLink(linkName) {
     homePageElement.electronicsTitle().should("exist");
     homePageElement.cellPhoneAccessoriesLink().should("exist");
-  
   }
 
   clickCellphoneAccessoriesLink() {
     homePageElement.cellPhoneAccessoriesLink().click();
+  }
+
+  searchBarInput(item) {
+    homePageElement.searchBarInput().type(item);
+  }
+
+  selectCategoryDropdown(category) {
+    homePageElement.selectCategoryDropdown().select(category);
+  }
+
+  clickSearchButton() {
+    homePageElement.searchButton().click();
   }
 }

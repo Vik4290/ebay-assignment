@@ -23,10 +23,28 @@ export default class SearchPageActions {
     searchPageElement.threefilterAppliedButton().click();
   }
 
-  verifyAppliedFilters(displayFilter, priceFilter, locationFilter)
-  {
-    searchPageElement.threefilterAppliedButton().siblings().contains(displayFilter);
-    searchPageElement.threefilterAppliedButton().siblings().contains(priceFilter);
-    searchPageElement.threefilterAppliedButton().siblings().contains(locationFilter);
-  } 
+  verifyAppliedFilters(displayFilter, priceFilter, locationFilter) {
+    searchPageElement
+      .threefilterAppliedButton()
+      .siblings()
+      .contains(displayFilter);
+    searchPageElement
+      .threefilterAppliedButton()
+      .siblings()
+      .contains(priceFilter);
+    searchPageElement
+      .threefilterAppliedButton()
+      .siblings()
+      .contains(locationFilter);
+  }
+
+verifyFirstItem()
+{
+
+  searchPageElement.firstItemInSearchResult().should("contains", 'Apple MacBook', { matchCase: true });
+
+}
+    
+
+
 }

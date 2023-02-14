@@ -8,4 +8,10 @@ export default class SearchPageElements {
       timeout: 10000,
     });
   }
+
+  firstItemInSearchResult() {
+    return cy.get(locator.searchPage.firstItemInSearchResult, {
+      timeout: 10000,
+    });
+  }
 }

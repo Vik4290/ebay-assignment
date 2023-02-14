@@ -26,4 +26,10 @@ Feature: Verify Search By Category feature with Applied filters
         When User click on "3 filters applied" dropdown
         Then User get "Screen Size: 5.5 - 5.9 in", "Price: $200.00 to $400.00", "Item Location: Worldwide" already selected
 
+    Scenario: Verify search result when user search for an item using search bar availble on home page
+        When User user enter "Macbook" in search bar on home page
+        And Select "Computers/Tablets & Networking" as Search category followed by click on Search button
+        Then Verify Page loaded successfully
+        And Verify that final results matches with then entered string in step1.
+
 

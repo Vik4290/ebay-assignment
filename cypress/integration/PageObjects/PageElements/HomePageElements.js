@@ -16,4 +16,22 @@ export default class HomePageElements {
       timeout: 10000,
     });
   }
+
+  searchBarInput() {
+    return cy.get(locator.homePage.searchBarInput, {
+      timeout: 10000,
+    });
+  }
+
+  selectCategoryDropdown() {
+    return cy.get(locator.homePage.selectCategoryDropdown, {
+      timeout: 10000,
+    });
+  }
+
+  searchButton() {
+    return cy.get(locator.homePage.searchButton, {
+      timeout: 10000,
+    });
+  }
 }

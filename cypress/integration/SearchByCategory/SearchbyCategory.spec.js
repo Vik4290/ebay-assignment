@@ -13,6 +13,12 @@ const cellPhoneActions = new CellPhoneAccessoryActions();
 const filterAction = new FilterActions();
 const searchAction = new SearchPageActions();
 
+Cypress.on("uncaught:exception", () => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false;
+});
+
 When(/^I visit a main page$/, () => {
   cy.visit("/", { timeout: 60000 });
 });
@@ -124,5 +130,30 @@ Then(
   /^User get "(.*)", "(.*)", "(.*)" already selected$/,
   (displayFilter, priceFilter, locationFilter) => {
     searchAction.clickThreefilterAppliedButton();
+  }
+);
+
+When(/^User user enter "(.*)" in search bar on home page$/, (item) => {
+  homeActions.searchBarInput(item);
+});
+
+And(
+  /^Select "(.*)" as Search category followed by click on Search button$/,
+  (category) => {
+    homeActions.selectCategoryDropdown(category);
+    homeActions.clickSearchButton();
+  }
+);
+
+Then(/^Verify Page loaded successfully$/, () => {
+  searchAction.verifySearchPageTitle(
+    "Macbook in Computers/Tablets & Networking for sale | eBay"
+  );
+});
+
+And(
+  /^Verify that final results matches with then entered string in step1.$/,
+  () => {
+    searchAction.verifyFirstItem();
   }
 );

@@ -2,7 +2,12 @@
     "homePage": {
         "shopByCategory": "#gh-shop-a",
         "electronicsTitle": "a[title=\"Your shopping destination for the best selection and value in electronics and accessories\"]",
-        "cellPhoneAccessoriesLink": "a:contains(\"Cell phones & accessories\")"
+        "cellPhoneAccessoriesLink": "a:contains(\"Cell phones & accessories\")",
+        "searchBarInput":"input[placeholder=\"Search for anything\"]",
+        "selectCategoryDropdown":"select[aria-label=\"Select a category for search\"]",
+        "searchButton":"input[value=\"Search\"]"
+        
+       
     },
     "cellPhoneAccessoriesPage": {
         "breadcrumb": "[aria-labelledby*=\"-breadcrumbs-heading\"]",
@@ -28,6 +33,7 @@
 
 
     "searchPage": {
-       "threefilterAppliedButton":"button:contains('3 filters applied')"
+       "threefilterAppliedButton":"button:contains('3 filters applied')",
+       "firstItemInSearchResult":"div.s-item__title span:nth-child(1) > span.BOLD"
     }
 }

@@ -34,6 +34,6 @@
 
     "searchPage": {
        "threefilterAppliedButton":"button:contains('3 filters applied')",
-       "firstItemInSearchResult":"div.s-item__title span:nth-child(1) > span.BOLD"
+       "firstItemInSearchResult":"div.s-item__title"
     }
 }

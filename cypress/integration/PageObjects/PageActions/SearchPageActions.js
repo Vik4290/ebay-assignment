@@ -38,13 +38,15 @@ export default class SearchPageActions {
       .contains(locationFilter);
   }
 
-verifyFirstItem()
-{
-
-  searchPageElement.firstItemInSearchResult().should("contains", 'Apple MacBook', { matchCase: true });
-
-}
-    
-
-
+  verifyFirstItem() {
+    searchPageElement
+      .firstItemInSearchResult()
+      .eq(1)
+      .then(($in) => {
+        cy.wrap($in)
+          .children()
+          .invoke("text")
+          .should("contains", "Apple MacBook");
+      });
+  }
 }
